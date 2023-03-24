@@ -1,3 +1,5 @@
 # apriori_recommendation-engine
 This exercise takes a movie dataframe, uses the apriori algorithm, and computes the support, confidence and lift parmeters for pairs of movies. 
 The movie pairs, along with their association parameters are then stored in a pandas dataframe. 
+# Content based recommendation engine
+This engine takes a dataframe containing item ids and their descriptions, computes the item to item cosine similarity, creates tuples containing item indices and their consine similarities, matches the index of each item in the id column of the df dataframe with the index of the cosine similarity matrix, and then stores the indices of the sorted items in the results dictionary according to the ids (reason why we use i+1). Once we have the results dictionary having ids of items sorted according to their cosime similarity scores for each item, we use a function that takes the id of the item for which the similarity score has to be calculated, and the number of similar items that need to be printed, and then return the ids of the similar items.
